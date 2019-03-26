@@ -1,0 +1,53 @@
+package exercise2;
+
+import java.util.Scanner;
+
+public class TestDay {
+
+    public static void main(String[] args) {
+
+        Scanner kb = new Scanner(System.in);
+        String day;
+        try {
+            System.out.println("Enter a day?");
+            day = kb.nextLine();
+            checkDay(day);
+            System.out.println("Thank you");
+        } catch (InvalidDayException ice) {
+            System.out.println(ice.getMessage());
+        } finally {
+            System.out.println("Bye Bye ");
+        }
+    }
+
+    public static void checkDay(String p) throws
+            InvalidDayException {
+
+        boolean found = false;
+        String[] dayList = {"Monday", "Tuesday", "Wednesday",
+            "Thursday", "Friday", "Saturday", "Sunday"};
+
+        for (String dayList1 : dayList) {
+            if (dayList1.equals(p)) {
+                found = true;
+            }
+        }
+        if (found) {
+            System.out.println("Valid");
+        } else {
+            throw new InvalidDayException();
+        }
+    }
+}
+
+(i) output:
+	Enter a Day?
+	ffff
+	Error: Invalid Day Entered
+	Bye Bye
+
+(ii) output:
+	Enter a Day?
+	Monday
+	Thank You
+	Bye Bye
