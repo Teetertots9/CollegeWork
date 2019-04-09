@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Lab3SampleCA;
+package ca;
 
 import java.util.ArrayList;
 import java.util.List;

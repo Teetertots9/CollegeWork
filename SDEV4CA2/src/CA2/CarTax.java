@@ -11,4 +11,22 @@ package CA2;
  */
 public enum CarTax {
     
+ZERO_ONE{
+    @Override
+    public double getTax(){
+        return 120;
+    }
+},TWO_EIGHTY{
+    @Override
+    public double getTax(){
+        return 170;
+    }
+},EIGHTYONE_ONEHUNDRED{
+    @Override
+    public double getTax(){
+        return 180;
+    }
+};
+
+public abstract double getTax();
 }
